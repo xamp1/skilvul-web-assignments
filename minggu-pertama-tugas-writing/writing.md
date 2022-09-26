@@ -155,3 +155,16 @@
   padding: 10px;
   }
   ```
+
+
+  ## Algoritma dan Struktur Data
+- ### Perbedaan antara Algoritma dan Data Structures
+  - Algoritma adalah deskripsi berupa step-step yang dibutuhkan untuk menyelesaikan suatu masalah
+  - Struktur data adalah cara penyimpanan, pengorganisasian, dan pengaturan data di dalam media penyimpanan komputer sehingga data tersebut dapat digunakan secara efisien.
+- ### Manfaat Algoritma dan Data Structure
+- ### Algoritma Sederhana
+- ### Algoritma ke dalam bahasa pemrograman
+- ### Big O Notation
+- ### Menyelesaikan suatu masalah untuk diselesaikan melalui program 
+- ### Algoritma dengan JavaScript
+- ### Struktur Data dengan JavaScript
