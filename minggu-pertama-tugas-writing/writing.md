@@ -173,7 +173,16 @@
   
 - ### Big O Notation
   Adalah sebuah cara atau metode untuk melakukan analisa terhadap sebuah algoritma pemrograman terhadap waktu eksekusi. Tentang seberapa efisien dan kompleksitas barisan kode dalam dimensi waktu.
-- ### Menyelesaikan suatu masalah untuk diselesaikan melalui program 
+- ### Menyelesaikan suatu masalah untuk diselesaikan melalui program
+  Pada program di bawah Kita hanya akan mengambil data yang hanya habis dibagi dua saja
+  ```javascript
+  const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  
+  const filteredArray = angka.filter((item) => {return item % 2 === 0});
+
+  console.log(filteredArray) // -> [2, 4, 6, 8]
+  ```
+  konstanta angka 1 - 9, lalu {return item % 2 === 0}, maka tampilkan 2,4,6,8
 - ### Algoritma dengan JavaScript
   ```javascript
   var a,b,c;
@@ -187,3 +196,7 @@
   - b = Angka kedua
   - c = trigger
 - ### Struktur Data dengan JavaScript
+  ```javascript
+  var buah = ["Apel", "Jeruk", "Manggis"];
+  ```
+  Apel, Jeruk, dan Manggis terhitung sebagai data dalam algoritma di atas 
