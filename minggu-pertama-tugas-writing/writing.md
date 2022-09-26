@@ -42,3 +42,13 @@
   Untuk mempublish aplikasi pada git dapat dilakukan dengan command git push -u origin, lalu tambahkan master/main tergantung dengan branch yg repo kita miliki
 - ### Cloning Github ke Local
   Untuk cloning github ke local pada git dapat diakukan dengan command git clone (link repo yang ingin di cloning)
+
+## HTML
+- ### Peran HTML pada web development
+  HTML adalah singkatan dari Hypertext Markup Language. HTML digunakan untuk menampilkan konten pada browser, mengelola serangkaian data dan informasi sehingga suatu dokumen dapat diakses dan ditampilkan di Internet.
+- ### Tools Pendukung HTML
+- ### HTML Sederhana
+- ### Live Server HTML
+- ### Tag HTML yang populer
+- ### Semantic HTML
+- ### Tahap Deployment
