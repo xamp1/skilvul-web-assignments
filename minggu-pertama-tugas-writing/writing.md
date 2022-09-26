@@ -105,8 +105,45 @@
   ```
   dengan menggunakan sintaks di atas maka akan mengubah warna teks menjadi merah dan rata tengah
 - ### Styling CSS
-  
+  kita dapat melakukann styling CSS dengan 3 cara antara lain
+  - Internal
+  - External
+  - Inline
+  berikut contoh styling inline pada html
+  ```html
+    <!DOCTYPE html>
+  <html>
+  <head>
+  <style>
+  h1 {
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+  }
+  p {
+    color: red;
+    font-family: courier;
+    font-size: 160%;
+  }
+  </style>
+  </head>
+  <body>
+
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
+
+  </body>
+  </html>
+  ```
 - ### Responsive web CSS
+  Merancang Untuk Pengalaman Terbaik Untuk Semua Pengguna. Halaman web dapat dilihat menggunakan banyak perangkat berbeda: desktop, tablet, dan ponsel. Halaman web Anda akan terlihat bagus, dan mudah digunakan, apa pun perangkatnya.
+  Membuat web responsive dapat menggunakan metode viewport
+  ```html
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ```
+  - Ini memberikan petunjuk kepada browser tentang cara mengontrol dimensi dan penskalaan halaman.
+  - Bagian width=device-width mengatur lebar halaman untuk mengikuti lebar layar perangkat (yang akan bervariasi tergantung pada perangkat).
+  - Bagian initial-scale=1.0 menyetel tingkat zoom awal saat halaman pertama kali dimuat oleh browser.
 - ### Flexbox
   Flexbox adalah cara untuk mengatur layout. Flexbox memiliki kemampuan untuk menyesuaikan layout secara otomatis. kita dapat menggunakan flexbox untuk menyelaraskan elemen kita:
   ```css
