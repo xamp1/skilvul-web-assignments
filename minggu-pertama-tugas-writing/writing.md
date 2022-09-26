@@ -170,7 +170,20 @@
   - Selanjutnya pasang cas ponsel ini pada stop kontak atau colokan, pastikan pasang dengan benar.
   - Bila telah menunjukkan penambahan daya silahkan tunggu hingga penuh dengan menjalankan aktivitas lain.
 - ### Algoritma ke dalam bahasa pemrograman
-  
+  - Mulai
+  - Deklarasikan variable a,b,c
+  - Read isi a,b,c
+  - Tambahkan a dengan b lalu masukkan ke c
+  - Tampilkan c
+  - Stop
+  ```javascript
+  var a,b,c;
+  a = prompt ("Angka Pertama");
+  b = prompt ("Angka Kedua");
+  c = Angka(a) + Angka(b);
+  console.log(c);
+  alert("Result = " + c);
+  ```
 - ### Big O Notation
   Adalah sebuah cara atau metode untuk melakukan analisa terhadap sebuah algoritma pemrograman terhadap waktu eksekusi. Tentang seberapa efisien dan kompleksitas barisan kode dalam dimensi waktu.
 - ### Menyelesaikan suatu masalah untuk diselesaikan melalui program
