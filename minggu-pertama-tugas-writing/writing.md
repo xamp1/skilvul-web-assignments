@@ -213,3 +213,30 @@
   var buah = ["Apel", "Jeruk", "Manggis"];
   ```
   Apel, Jeruk, dan Manggis terhitung sebagai data dalam algoritma di atas 
+
+
+  ## Perkenalan JavaScript
+- ### JavaScript pada web development
+  Javascript adalah bahasa pemograman yang sangat powerful yang digunakan untuk logic pada sebuah website. Javascript juga dapat membuat website menjadi interaktif dan dinamis
+- ### Menjalankan JavaScript
+  - Untuk menjalankan JS kita dapat menggunakan browser, contohnya chorme, langkah pertama adalah menjalankan file html kita, lalu klik kanan dan pilih inspect, lalu pilih console, kita dapat membuat atau menjalankan JS disana
+  - Javascript dijalankan melalui browser pada device setiap user. Umumnya browser Chrome dan Mozilla yang sudah support untuk semua fitur Javascript.
+- ### Tipe Data
+  Tipe data adalah klasifikasi yang kita berikan untuk berbagai macam data yang digunakan dalam programming, ada 6 tipe data fundamental pada Javascript antara lain
+  - number: Tipe data number adalah tipe data yang mengandung semua angka termasuk angka desimal.
+  - string: Tipe data string adalah grup karakter yang ada pada keyboard laptop/PC kita yaitu letters (huruf), number (angka), spaces (spasi), symbol, dan lainnya.
+  - boolean: Tipe data boolean adalah tipe data yang hanya mempunyai 2 buah nilai.
+  - null: Tipe data null adalah tipe data yang diartikan bahwa sebuah variable/data tidak memiliki nilai.
+  - undefined: Tipe data undefined adalah tipe data yang merepresentasikan varibel/data yang tidak memiliki nilai.
+  - object: Tipe data object adalah koleksi data yang saling berhubungan (related). Tipe data pbject dapat menyimpan data dengan tipe data apapun (number, string, boolean, dan lainnya).
+- ### Operator JS
+  - Assignment Operator (=) Assignment operator digunakan untuk menyimpan sebuah nilai pada variabel.
+  - Increment dan Decrement (++)(--) Gunakan increment atau decrement untuk menambah atau mengurangi sebesar 1 nilai.
+  - Arithmetic Operator Tambah (+) Kuramg (-) Perkalian (*) Pembagian (/) Modulus (%)
+  - Comparison Operator Comparison operator adalah operator yang membandingkan satu nilai dengan nilai lainnya.
+  - Logical Operator Logical operator biasa digunakan untuk sebuah CONDITIONAL pada pemograman. Menghasilkan nilai BOOLEAN yaitu TRUE or FALSE.
+  - AND (&&) AND akan menghasilkan nilai true jika kedua atau semua premis bernilai TRUE.
+  - OR (||) OR akan menghasilkan nilai true jika salah satu premis mengandung nilai TRUE
+  - NOT (!) NOT akan membalikkan sebuah nilai BOOLEAN. TRUE menjadi FALSE dan sebaliknya.
+
+- ### Control Flow
