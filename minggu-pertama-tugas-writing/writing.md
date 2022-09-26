@@ -62,8 +62,6 @@
   ```
 - ### Live Server HTML
   untuk melakukan live server cukup dengan klik tombol live server pada vs code
-  ![](img/live-server.PNG)
-  
 - ### Tag HTML yang populer
   - Tag HTML: Ini adalah akar dari dokumen HTML yang digunakan untuk menentukan bahwa dokumen tersebut adalah HTML.
   ```html
@@ -78,4 +76,9 @@
   <head> Statements... </head>
   ```
 - ### Semantic HTML
+  HTML semantik atau markup semantik adalah HTML yang memperkenalkan makna ke halaman web bukan hanya presentasi, contoh tag semantic antara lain
+  - h1, h2, h3, h4, h5, dan h6 — kita dapat menggunakan tag heading untuk membuat font lebih besar dan lebih tebal, tetapi jika teksnya bukan heading, gunakan properti CSS font-weight dan font-size sebagai gantinya.
+  ```html
+  <h1> -- <h6>
+  ```
 - ### Tahap Deployment
