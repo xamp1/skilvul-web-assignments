@@ -9,13 +9,14 @@
 - ### File System Structure
   proses pengaturan penyimpanan dan akses data di dalam sebuah disk. filesystem mengatur bagaimana data disimpan di dalam sebuah system.
 - ### Command
-  - dir (directory), untuk melihat directory
   - pwd (print working directory), untuk melihat current working directory
-  - ls (list), untuk melihat isi file di dalam directory
-  - cd (change directory), untuk pindah directory
-  - cp (copy), untuk menyalin file directory
+  - dir (directory), untuk melihat isi sebuah directory
+  - cd (change directory), untuk berpindah directory
+  - ls (list), untuk melihat isi files
   - touch, untuk membuat file directory
-  - mv (move), untuk memindahkan file directory
+  - cp (copy), untuk menyalin file directory
+  - mv (move), untuk memindahkan atau merename file directory
   - rm (remove), untuk menghapus file directory
+
   
   &nbsp;
