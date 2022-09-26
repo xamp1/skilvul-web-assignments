@@ -97,11 +97,11 @@
   ```
 - ### Sintaks dasar CSS
   contoh sintaks dasar css
-  ```html
+  ```css
   p {
   color: red;
   text-align: center;
-}
+  }
   ```
   dengan menggunakan sintaks di atas maka akan mengubah warna teks menjadi merah dan rata tengah
 - ### Styling CSS
@@ -109,12 +109,12 @@
 - ### Responsive web CSS
 - ### Flexbox
   Flexbox adalah cara untuk mengatur layout. Flexbox memiliki kemampuan untuk menyesuaikan layout secara otomatis. kita dapat menggunakan flexbox untuk menyelaraskan elemen kita:
-  ```html
+  ```css
   #container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   padding: 10px;
-}
+  }
   ```
