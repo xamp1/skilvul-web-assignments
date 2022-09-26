@@ -3,11 +3,11 @@
 - ### Shell
   Shell adalah program yang digunakan untuk komunikasi antara user dan sistem operasi dan memberi perintah kepada sistem.
 - ### CLI (Command Line Interface)
-  jenis shell yang berbasis teks.
+  Merupakan jenis shell yang berbasis teks.
 - ### Terminal
-  terminal adalah penghubung antara user dan komputer, yang mewadahi shell.
+  Terminal adalah penghubung antara user dan komputer, yang mewadahi shell.
 - ### File System Structure
-  cara sistem operasi mengatur file dan direktori dalam bentuk pohon(tree) filesystem mengatur bagaimana data disimpan di dalam sebuah system.
+  Cara sistem operasi mengatur file dan direktori dalam bentuk pohon(tree) filesystem mengatur bagaimana data disimpan di dalam sebuah system.
 - ### Command
   - pwd (print working directory), untuk melihat current working directory
   - dir (directory), untuk melihat isi sebuah directory
@@ -20,7 +20,7 @@
   
 ## Git & Github Dasar
 - ### Mengapa Git & Github adalah tools yang wajib digunakan?
-  sebagai tools yang dapat mempermudah hidup karena dengan github kita bisa berkolaborasi dengan programmer lain
+  Sebagai tools yang dapat mempermudah hidup, karena dengan github kita bisa berkolaborasi dengan programmer lain
 - ### Perbedaan Git & Github
   - Git adalah version controler digunakan untuk menyimpan, tracking, dan manajemen perubahan pada code yang kita buat saat pengembangan suatu aplikasi.
   - Github adalah penyedia layanan git
