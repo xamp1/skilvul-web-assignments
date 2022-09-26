@@ -161,10 +161,29 @@
 - ### Perbedaan antara Algoritma dan Data Structures
   - Algoritma adalah deskripsi berupa step-step yang dibutuhkan untuk menyelesaikan suatu masalah
   - Struktur data adalah cara penyimpanan, pengorganisasian, dan pengaturan data di dalam media penyimpanan komputer sehingga data tersebut dapat digunakan secara efisien.
-- ### Manfaat Algoritma dan Data Structure
+- ### Kenapa Algoritma dan Data Structure
+  - Programming itu adalah algoritma dan struktur data
+  - Data struktur digunakan untuk mengelola/manajemen sebuah data Dan Algoritma yang akan menyelesaikan suatu permasalahan menggunakan data tersebut.
 - ### Algoritma Sederhana
+  contoh algoritma sederhana dapat dimulai dari kehidupan kita sehari hari contohnya algoritma saat mengecas hp
+  - Jika ponsel telah menandakan kekurangan daya segera ambil charger.
+  - Selanjutnya pasang cas ponsel ini pada stop kontak atau colokan, pastikan pasang dengan benar.
+  - Bila telah menunjukkan penambahan daya silahkan tunggu hingga penuh dengan menjalankan aktivitas lain.
 - ### Algoritma ke dalam bahasa pemrograman
+  
 - ### Big O Notation
+  Adalah sebuah cara atau metode untuk melakukan analisa terhadap sebuah algoritma pemrograman terhadap waktu eksekusi. Tentang seberapa efisien dan kompleksitas barisan kode dalam dimensi waktu.
 - ### Menyelesaikan suatu masalah untuk diselesaikan melalui program 
 - ### Algoritma dengan JavaScript
+  ```javascript
+  var a,b,c;
+  a = prompt ("Angka Pertama");
+  b = prompt ("Angka Kedua");
+  c = Angka(a) + Angka(b);
+  console.log(c);
+  alert("Result = " + c);
+  ```
+  - a = Angka pertama
+  - b = Angka kedua
+  - c = trigger
 - ### Struktur Data dengan JavaScript
