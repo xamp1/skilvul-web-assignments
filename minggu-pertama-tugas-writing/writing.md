@@ -61,7 +61,9 @@
   </html>
   ```
 - ### Live Server HTML
-  untuk melakukan live server cukup dengan klik tombol live server pada vs code
+  untuk melakukan live server cukup dengan klik tombol live server pada vs code 
+  ![live-server](https://user-images.githubusercontent.com/76435776/192291769-276b2072-f7f1-467b-8209-4eea4cd5ff88.png)
+
 - ### Tag HTML yang populer
   - Tag HTML: Ini adalah akar dari dokumen HTML yang digunakan untuk menentukan bahwa dokumen tersebut adalah HTML.
   ```html
@@ -82,3 +84,13 @@
   <h1> -- <h6>
   ```
 - ### Tahap Deployment
+  tahap penyebaran aplikasi agar orang lain bisa melihat website yang telah kita buat, deployment website bisa menggunakan netlify, cukup drag and drop folder website dan netlify akan langsung memprosesnya, dapat juga menggunakan github cukup hubungkan github dengan netlify
+  
+  
+  ## CSS
+- ###
+- ###
+- ###
+- ###
+- ###
+- ###
