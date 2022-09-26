@@ -45,9 +45,21 @@
 
 ## HTML
 - ### Peran HTML pada web development
-  HTML adalah singkatan dari Hypertext Markup Language. HTML digunakan untuk menampilkan konten pada browser, mengelola serangkaian data dan informasi sehingga suatu dokumen dapat diakses dan ditampilkan di Internet.
-- ### Tools Pendukung HTML
+  HTML adalah singkatan dari Hypertext Markup Language. HTML bersifat statis. HTML hanya bertugas menampilkan konten yang diminta oleh developer. HTML digunakan untuk menampilkan konten pada browser, mengelola serangkaian data dan informasi sehingga suatu dokumen dapat diakses dan ditampilkan di Internet.
+- ### Tools HTML
+  2 tools utama HTML antara lain code editor dan browser, adapun contoh code editor dan browser yang di anjurkan untuk html adalah Visual Studio Code, Dan Google Chrome
 - ### HTML Sederhana
+  ```html
+  <html>
+  <head>
+  <title>
+      Judul
+    </title>
+  <body>
+      Isi body
+    </body>
+  </html>
+  ```
 - ### Live Server HTML
 - ### Tag HTML yang populer
 - ### Semantic HTML
