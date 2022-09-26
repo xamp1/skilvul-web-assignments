@@ -28,6 +28,12 @@
   - Pertama Buat branch/cabang di repository. Nama branch yang pendek dan deskriptif agar kolaborator dapat melihat pekerjaan yang sedang berlangsung secara sekilas.
   - Di branch, buat perubahan yang diinginkan pada repository.
   - Commit dan push perubahan ke branch. Berikan setiap commit pesan deskriptif untuk membantu kita dan kontributor masa depan memahami perubahan apa yang ada di commit.
+  - Terus buat commit, dan push perubahan ke branch hingga kita siap untuk meminta umpan balik.
+  - Buat pull request untuk meminta masukan dari kolaborator tentang perubahan kita.
+  - Saat membuat permintaan tarik, sertakan ringkasan perubahan dan masalah apa yang mereka pecahkan.
+  - Alamat ulasan komentar. Reviewer harus meninggalkan pertanyaan, komentar, dan saran. Peninjau dapat mengomentari seluruh permintaan tarik atau menambahkan komentar ke baris tertentu.
+  - Gabungkan pull request kita. Setelah permintaan tarik kita disetujui, gabungkan pull request kita. Ini akan secara otomatis menggabungkan branch kita sehingga perubahan kita muncul di branch default.
+  - Hapus cabang kita. Setelah kita menggabungkan pull request kita, hapus branch kita. Ini menunjukkan bahwa pekerjaan di branch selesai dan mencegah kita atau orang lain menggunakan cabang lama secara tidak sengaja.
 - ### Membuat Repository Git
   Untuk Membuat repository pada git dapat dilakukan dengan command git init <nama_repo>
 - ### Melakukan Commit pada Git
