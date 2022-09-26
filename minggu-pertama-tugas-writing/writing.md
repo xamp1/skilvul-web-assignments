@@ -44,7 +44,7 @@
   Untuk cloning github ke local pada git dapat diakukan dengan command git clone (link repo yang ingin di cloning)
 
 ## HTML
-- ### Peran HTML pada web development
+- ### HTML pada web development
   HTML adalah singkatan dari Hypertext Markup Language. HTML bersifat statis. HTML hanya bertugas menampilkan konten yang diminta oleh developer. HTML digunakan untuk menampilkan konten pada browser, mengelola serangkaian data dan informasi sehingga suatu dokumen dapat diakses dan ditampilkan di Internet.
 - ### Tools HTML
   2 tools utama HTML antara lain code editor dan browser, adapun contoh code editor dan browser yang di anjurkan untuk html adalah Visual Studio Code, Dan Google Chrome
@@ -88,9 +88,33 @@
   
   
   ## CSS
-- ###
-- ###
-- ###
-- ###
-- ###
-- ###
+- ### CSS pada web development
+  Cascading Style Sheets (CSS) adalah bahasa style sheet yang digunakan untuk menggambarkan presentasi dokumen yang ditulis dalam bahasa markup seperti HTML atau XML.
+- ### CSS ke dalam html
+  kita bisa menyisipkan css ke dalam html melalui link
+  ```html
+  <link rel="stylesheet" href="mystyle.css">
+  ```
+- ### Sintaks dasar CSS
+  contoh sintaks dasar css
+  ```html
+  p {
+  color: red;
+  text-align: center;
+}
+  ```
+  dengan menggunakan sintaks di atas maka akan mengubah warna teks menjadi merah dan rata tengah
+- ### Styling CSS
+  
+- ### Responsive web CSS
+- ### Flexbox
+  Flexbox adalah cara untuk mengatur layout. Flexbox memiliki kemampuan untuk menyesuaikan layout secara otomatis. kita dapat menggunakan flexbox untuk menyelaraskan elemen kita:
+  ```html
+  #container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+  ```
