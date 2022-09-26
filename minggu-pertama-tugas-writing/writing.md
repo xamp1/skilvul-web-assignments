@@ -62,5 +62,17 @@
   ```
 - ### Live Server HTML
 - ### Tag HTML yang populer
+  - Tag HTML: Ini adalah akar dari dokumen HTML yang digunakan untuk menentukan bahwa dokumen tersebut adalah HTML.
+  ```html
+  <html> Statements... </html>
+  ```
+  - Tag head: Tag head digunakan untuk memuat semua elemen kepala dalam file HTML. Ini berisi judul, gaya, meta, ... dll.
+  ```html
+  <head> Statements... </head>
+  ```
+  - Tag Body: Ini digunakan untuk mendefinisikan tubuh dokumen HTML. Ini berisi gambar, tabel, daftar, ... dll.
+   ```html
+  <head> Statements... </head>
+  ```
 - ### Semantic HTML
 - ### Tahap Deployment
