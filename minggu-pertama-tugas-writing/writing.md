@@ -61,6 +61,8 @@
   </html>
   ```
 - ### Live Server HTML
+  untuk melakukan live server cukup dengan klik tombol live server pada vs code
+  ![](img/live-server.png)
 - ### Tag HTML yang populer
   - Tag HTML: Ini adalah akar dari dokumen HTML yang digunakan untuk menentukan bahwa dokumen tersebut adalah HTML.
   ```html
