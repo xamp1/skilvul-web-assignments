@@ -1,1 +1,1 @@
-# Weekly Skilvu Web Assignments
+# Weekly Skilvul Web Assignments
