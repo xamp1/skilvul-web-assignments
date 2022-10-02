@@ -40,3 +40,28 @@ try {
   - Numbers, Strings, Booleans, undefined & null Tergolong kedalam data type primitve
   - Objects, Arrays & Functions Termasuk kedalam data type non primitive
   - Tipe data primitif disimpan berdasarkan nilai. Tipe data non-primitif disimpan dengan referensi. Saat mendeklarasikan variabel, kita biasanya membuat alamat baru yang potensial. Dalam hal menyimpan primitif, variabel itu menunjuk ke alamat baru untuk nilai primitif itu. Saat menyimpan nilai primitif (bahkan jika itu hanya variabel yang disetel ke nilai), kita menyimpan nilai itu sendiri ke alamat baru. Dalam kasus objek non-primitif, variabel menyimpan referensi ke objek. Itu tidak membuat alamat baru untuk suatu nilai, hanya penunjuk ke objek. Jika kita mengubah variabel yang menunjuk ke alamat, kita sebenarnya memodifikasi data yang disimpan di dalam alamat itu sendiri.
+
+# DOM Manipulation
+Dom Adalah
+- Elemen untuk Menyeleksi
+  - getElementById() – memilih element berdasarkan id
+  - getElementsByName() – memilih element berdasarkan nama
+  - getElementsByTagName() – memilih element berdasarkan tag nama
+  - getElementsByClassName() – memilih element berdasarkan nama classnya
+  - querySelector() – memilih element berdasarkan CSS Selectornya
+- Elemen untuk Memanipulasi
+- createElement() – membuat element baru
+```javascript
+createElement(tagName)
+createElement(tagName, options)
+```
+  - append() – menyisipkan node setelah node anak terakhir dari node induk.
+```javascript
+append(param1)
+append(param1, param2)
+append(param1, param2, /* … ,*/ paramN)
+```
+  - removeChild() – menghapus elemen anak dari sebuah node.
+```javascript
+removeChild(child)
+```
