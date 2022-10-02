@@ -24,5 +24,16 @@ try {
   console.error(`${e.name}: ${e.message}`);
 }
 ```
-# Data Type, Method, Property
--
+# Data Type Built in Prototype & Method
+- Data Type
+  - Semua bahasa pemrograman memiliki struktur data bawaan, tetapi ini sering berbeda dari satu bahasa ke bahasa lainnya.
+- String
+  - Objek String digunakan untuk mewakili dan memanipulasi urutan karakter.
+  - String berguna untuk menyimpan data yang dapat direpresentasikan dalam bentuk teks. Beberapa operasi yang paling sering digunakan pada string adalah memeriksa       - panjangnya, membangun dan menggabungkannya menggunakan operator string + dan +=, memeriksa keberadaan atau lokasi substring dengan metode indexOf(), atau mengekstrak substring dengan substring () metode.
+- Number
+  - Number adalah objek wrapper primitif yang digunakan untuk mewakili dan memanipulasi angka seperti 37 atau -9,25.
+  - Konstruktor Number berisi konstanta dan metode untuk bekerja dengan angka. Nilai dari tipe lain dapat dikonversi ke angka menggunakan fungsi Number().
+- Math
+  - Math adalah objek bawaan yang memiliki properti dan metode untuk konstanta dan fungsi matematika. Math bukanlah objek fungsi.
+  - Tidak seperti banyak objek global lainnya, Math bukanlah sebuah konstruktor. Semua properti dan metode Math bersifat statis. Anda merujuk ke pi konstan sebagai Math.PI dan Anda memanggil fungsi sinus sebagai Math.sin(x), di mana x adalah argumen metode. Konstanta didefinisikan dengan presisi penuh bilangan real dalam JavaScript.
+- Primitive & Non Primitive
