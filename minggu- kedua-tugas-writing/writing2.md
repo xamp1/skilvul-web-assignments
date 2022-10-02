@@ -22,4 +22,5 @@ try {
   console.error(`${e.name}: ${e.message}`);
 }
 ```
-# Data Type, Method, Primitive & Non Primitive
+# Data Type, Method, Property
+-
