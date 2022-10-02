@@ -1,3 +1,5 @@
+# **Rangkuman Minggu Kedua**
+
 # Scope
 - Scope adalah konsep dalam flow data variabel. Menentukan suatu variabel bisa diakses pada scope tertentu atau tidak.
 - Global scope berarti variabel yang kita buat dapat diakses dimanapun dalam suatu file. Agar menjadi Global Scope, suatu variabel harus dideklarasikan diluar Blocks.
@@ -9,7 +11,7 @@
 ```javascript
 console.log("Hello World!"); 
 ```
-- Fungsi di atas akan menampilkan text "Hello World"
+_Fungsi di atas akan menampilkan text "Hello World"_
 
 # Errors & Debugging
 - Error adalah objek serializable, sehingga dapat dikloning dengan structuredClone() atau disalin antara Pekerja menggunakan postMessage()
