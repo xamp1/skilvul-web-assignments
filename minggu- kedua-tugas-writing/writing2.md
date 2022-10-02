@@ -1,4 +1,4 @@
-# **Rangkuman Minggu Kedua**
+# _**Rangkuman Minggu Kedua**_
 
 # Scope
 - Scope adalah konsep dalam flow data variabel. Menentukan suatu variabel bisa diakses pada scope tertentu atau tidak.
@@ -37,3 +37,6 @@ try {
   - Math adalah objek bawaan yang memiliki properti dan metode untuk konstanta dan fungsi matematika. Math bukanlah objek fungsi.
   - Tidak seperti banyak objek global lainnya, Math bukanlah sebuah konstruktor. Semua properti dan metode Math bersifat statis. Anda merujuk ke pi konstan sebagai Math.PI dan Anda memanggil fungsi sinus sebagai Math.sin(x), di mana x adalah argumen metode. Konstanta didefinisikan dengan presisi penuh bilangan real dalam JavaScript.
 - Primitive & Non Primitive
+  - Numbers, Strings, Booleans, undefined & null Tergolong kedalam data type primitve
+  - Objects, Arrays & Functions Termasuk kedalam data type non primitive
+  - Tipe data primitif disimpan berdasarkan nilai. Tipe data non-primitif disimpan dengan referensi. Saat mendeklarasikan variabel, Anda biasanya membuat alamat baru yang potensial. Dalam hal menyimpan primitif, variabel itu menunjuk ke alamat baru untuk nilai primitif itu. Saat menyimpan nilai primitif (bahkan jika itu hanya variabel yang disetel ke nilai), Anda menyimpan nilai itu sendiri ke alamat baru. Dalam kasus objek non-primitif, variabel menyimpan referensi ke objek. Itu tidak membuat alamat baru untuk suatu nilai, hanya penunjuk ke objek. Jika Anda mengubah variabel yang menunjuk ke alamat, Anda sebenarnya memodifikasi data yang disimpan di dalam alamat itu sendiri.
