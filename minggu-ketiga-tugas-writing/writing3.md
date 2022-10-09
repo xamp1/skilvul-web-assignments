@@ -203,3 +203,42 @@ const updateCookie = (name, value) => document.cookie = name + '=' + value + ';'
 const deleteCookie = (name) => document.cookie = name + '=; Max-Age=-1;';
 ```
 # Asynchronus
+  - Asynchronous programming adalah teknik yang memungkinkan program kita untuk memulai tugas yang berpotensi berjalan lama dan masih dapat responsif terhadap peristiwa lain saat tugas itu berjalan, daripada harus menunggu sampai tugas itu selesai. Setelah tugas itu selesai, program kita disajikan dengan hasilnya.
+    - Contoh Synchronous programming
+```javascript
+const name = 'Ath Thaariq';
+const greeting = `Hello, my name is ${name}!`; //Deklarasi name sebagai string, dan mendeklarasikan string lain bernama "greeting" yang menggunakan name
+console.log(greeting); //Menampilkan greeting ke konsol JavaScript.
+// "Hello, my name is Ath Thaariq!"
+```
+  - Take note di sini bahwa browser secara efektif melangkah melalui program satu baris pada satu waktu, dalam urutan yang kami tulis. Pada setiap titik, browser menunggu baris untuk menyelesaikan pekerjaannya sebelum melanjutkan ke baris berikutnya. Ini harus dilakukan karena setiap baris tergantung pada pekerjaan yang dilakukan pada baris sebelumnya. Jadi itu membuat ini menjadi Synchronous Program
+  - Asynchronous - Promise
+    - Sebuah Janji singkatnya: “Bayangkan kamu masih kecil. Ibumu berjanji padamu bahwa dia akan membelikanmu telepon baru minggu depan.” Kita tidak tahu apakah kita akan mendapatkan telepon itu sampai minggu depan. Apakah Ibu benar-benar dapat membelikan telepon baru, atau tidak. Itu adalah sebuah janji. Sebuah janji memiliki tiga keadaan. Antara lain: 
+    - Pending: Janji itu ditunda
+    - Fulfilled: Janji itu terpenuhi
+    - Rejected: Janjinya di lupakan atau tidak di terima
+  - berikut contoh programnya
+```javascript
+var isMomHappy = false;
+
+// Promise
+var willIGetNewPhone = new Promise(
+    function (resolve, reject) {
+        if (isMomHappy) {
+            var phone = {
+                brand: 'Samsung',
+                color: 'black'
+            };
+            resolve(phone); // fulfilled
+        } else {
+            var reason = new Error('mom is not happy');
+            reject(reason); // reject
+        }
+
+    }
+);
+```
+  - Asynchronous - Async Await
+  - API and HTTP Request
+  - JSON
+  - Asynchronous - Fetch
