@@ -151,7 +151,7 @@ console.log(person);
   - Recursive adalah function yang memanggil dirinya sendiri sampai kondisi tertentu.
     - Recursive kebanyakan digunakan untuk case matematika, fisika, kimia, dan yang berhubungan dengan calculation.
 ```javascript
-function Recrusif(){
+function recursive(){
     // ...
     recursive();
     // ...
@@ -172,4 +172,18 @@ function pow(x, n) {
 console.log(pow(2, 3)); // Output: 8
 ```
 # Web Storage
+  - Web Storage adalah salah satu Web API yang dapat menyimpan data secara lokal pada sisi client. Berbeda dengan objek atau array, data yang disimpan pada objek atau array JavaScript bersifat sementara, dan akan hilang jika terjadi reload atau pergantian URL pada browser.
+  - Cookies
+    - Cookie browser diperkenalkan ke web untuk menjaga informasi tetap tentang pengguna. Kasus penggunaan pertama adalah untuk memeriksa apakah pengguna telah mengunjungi situs web Netscape.
+    - Cookie adalah string yang memiliki name field, value field dan atribut opsional tambahan. Nilainya adalah string dan kita dapat menyimpan apa pun yang menurut kita terbaik untuk aplikasi kita. _ _ga_ pada Google Analytics mungkin salah satunya Cookie paling umum.
+    - Kita dapat memanipulasi Cookie Google Analytics dengan cara di bawah ini
+```javascript
+console.log(document.cookie)
+document.cookie = "alligator=alligator_cookie_content;"
+console.log(document.cookie)
+
+const createCookie = (name, value) => document.cookie = name + '=' + value + ';'
+const updateCookie = (name, value) => document.cookie = name + '=' + value + ';'
+const deleteCookie = (name) => document.cookie = name + '=; Max-Age=-1;';
+```
 # Asynchronus
