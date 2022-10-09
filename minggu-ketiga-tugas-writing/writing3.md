@@ -104,6 +104,49 @@ inventory.forEach((baris) => {
 });
 ```
 # Object
+  - Apa itu Object
+    - Object adalah entitas yang independen di mana ia memiliki metode dan properti. Nilai properti dapat berupa fungsi, dalam hal ini properti tersebut dikenal sebagai metode. dalam JavaScript Anda tidakd apat mendeklarasikan angka, string, dan boolean sebagai objek.
+    - Properti adalah data lengkap dari sebuah object.
+    - Method adalah action dari sebuah object. Apa saja yang dapat dilakukan dari suatu object.
+  - Membuat sebuah object
+```javascript
+let person = {}; //disini person menjadi object yang kosong
+```
+  - Mengakses Object dan Property Object
+```javascript
+let person = {
+    name : 'Ath Thaariq',
+    age : 20,
+    isVerified: true
+}
+console.log(person);
+```
+  - Update Object 
+```javascript
+let person = {
+    name : 'Ath Thaariq',
+    age : 20,
+    isVerified: true
+}
+person.age = '21'
+person.addres = 'Depok, Jawa Barat';
+console.log(person);
+```
+  - Delete Object
+```javascript
+let person = {
+    name : 'Ath Thaariq',
+    age : 20,
+    isVerified: true
+}
+delete person.age;
+console.log(person);
+```
+  - Method disebut Jika value yang kita masukkan pada property berupa function.
+  - Nested Object adalah Object yang berasal dari turunan object lainnya.
+  - Passed by reference yakni mengubah data yang ada pada object melalui sebuah function dan memasukkan object sebagai parameter function.
+  - Looping Object, jika ingin menampilkan seluruh object properti. Bisa menggunakan looping. Sehingga tidak perlu mengakses secara manual memanggil setiap propertinya.
+  - Array of Object, berarti list/kumpulan/daftar object yang seragam. Dikatakan seragam karena objek yang berada dalam satu array pasti memiliki property yang sama.
 # Recursive
 # Web Storage
 # Asynchronus
