@@ -148,5 +148,28 @@ console.log(person);
   - Looping Object, jika ingin menampilkan seluruh object properti. Bisa menggunakan looping. Sehingga tidak perlu mengakses secara manual memanggil setiap propertinya.
   - Array of Object, berarti list/kumpulan/daftar object yang seragam. Dikatakan seragam karena objek yang berada dalam satu array pasti memiliki property yang sama.
 # Recursive
+  - Recursive adalah function yang memanggil dirinya sendiri sampai kondisi tertentu.
+    - Recursive kebanyakan digunakan untuk case matematika, fisika, kimia, dan yang berhubungan dengan calculation.
+```javascript
+function Recrusif(){
+    // ...
+    recursive();
+    // ...
+}
+```
+  - Ciri - ciri Rekursif antara lain adalah
+    - Fungsi rekursif selalu memiliki kondisi yang menyatakan kapan fungsi tersebut berhenti. Kondisi ini harus dapat dibuktikan akan tercapai, karena jika tidak tercapai maka kita tidak dapat membuktikan bahwa fungsi akan berhenti, yang berarti algoritma kita tidak benar.
+    - Fungsi rekursif selalu memanggil dirinya sendiri sambil mengurangi atau memecahkan data masukan setiap panggilannya. Hal ini penting diingat, karena tujuan utama dari rekursif ialah memecahkan masalah dengan mengurangi masalah tersebut menjadi masalah-masalah kecil.
+  - Contoh Rekursif
+```javascript
+function pow(x, n) {
+    if (n = 1) {
+        return x;
+    } else {
+        return x * pow(x, n - 1);
+    }
+}
+console.log(pow(2, 3)); // Output: 8
+```
 # Web Storage
 # Asynchronus
