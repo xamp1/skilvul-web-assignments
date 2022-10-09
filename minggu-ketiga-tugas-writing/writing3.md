@@ -173,6 +173,22 @@ console.log(pow(2, 3)); // Output: 8
 ```
 # Web Storage
   - Web Storage adalah salah satu Web API yang dapat menyimpan data secara lokal pada sisi client. Berbeda dengan objek atau array, data yang disimpan pada objek atau array JavaScript bersifat sementara, dan akan hilang jika terjadi reload atau pergantian URL pada browser.
+  - Local Storage & Session Storage
+    - Object localStorage dan sessionStorage, adalah bagian dari API penyimpanan web, dan adalah dua alat hebat untuk menyimpan pasangan key/value secara lokal.
+    - localStorage dan sessionStorage hampir identik dan memiliki API yang sama. Perbedaannya adalah bahwa dengan sessionStorage, data hanya bertahan sampai jendela atau tab ditutup. Dengan localStorage, data dipertahankan hingga pengguna secara manual menghapus cache browser atau hingga aplikasi web Anda menghapus data.
+  - Membuat Entry dapat dilakukan dengan method setItem()
+```javascript
+let key = 'Item 1';
+localStorage.setItem(key, 'Value');
+```
+  - Membaca Entry dapat dilakukan dengan method getItem()
+```javascript
+let myItem = localStorage.getItem(key);
+```
+  - Mengupdate Entry dilakukan dengan method setItem() lagi menggunakan 2 argument, key yang ada dan key yang baru sebagai New Value
+```javascript
+let myItem = localStorage.setItem(key 'New Value');
+```
   - Cookies
     - Cookie browser diperkenalkan ke web untuk menjaga informasi tetap tentang pengguna. Kasus penggunaan pertama adalah untuk memeriksa apakah pengguna telah mengunjungi situs web Netscape.
     - Cookie adalah string yang memiliki name field, value field dan atribut opsional tambahan. Nilainya adalah string dan kita dapat menyimpan apa pun yang menurut kita terbaik untuk aplikasi kita. _ _ga_ pada Google Analytics mungkin salah satunya Cookie paling umum.
