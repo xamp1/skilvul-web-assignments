@@ -65,7 +65,44 @@ let inventory = [
 ];
 console.log(inventory);
 ```
+  - Akses index multidimensional array
+```javascript
+let inventory = [
+    ['Kaos Polos' , 10],
+    ['Jaket Hoodie' , 12],
+    ['Topi' , 24],
+    ['Celana' , 8],
+];
+console.log(inventory[1][0]);
+//Output: Jaket Hoodie
+```
+  - Properti dan Method built-in pada Multidimensional Array
+```javascript
+let inventory = [
+    ['Kaos Polos' , 10],
+    ['Jaket Hoodie' , 12],
+    ['Topi' , 24],
+    ['Celana' , 8],
+];
 
+inventory.push(['Jaket Sweater', 7]);
+
+console.log(inventory)
+```
+  - LOOPING FOR MULTIDIMENSIONAL ARRAY
+```javascript
+let inventory = [
+    ['Kaos Polos' , 10],
+    ['Jaket' , 12],
+    ['Topi' , 24],
+    ['Celana' , 8],
+];
+inventory.forEach((baris) => {
+    baris.forEach((column) => {
+        console.table(column);
+    });
+});
+```
 # Object
 # Recursive
 # Web Storage
