@@ -39,8 +39,33 @@ for (i = 1; i <= 10; i++){
 }
 ```
   - Dari contoh script di atas hanya menampilkan angka 1 sampai dengan 10, karena di situ ada operator yang berjalan hanya ketika nilai i dibawah atau sama dengan nilai 10.
-  - .forEach() adalah method untuk melakukan looping pada setiap elemen array.
+  - .forEach() adalah method untuk melakukan looping pada setiap elemen array. 
+```javascript
+const cars = ['tesla', 'honda', 'toyota'];
+cars.forEach(element => {
+console.log(element);
+}); // output: 'tesla', 'honda', 'toyota'
+```
   - .map melakukan perulangan/looping dengan membuat array baru.
+```javascript
+let arr = [1,2,3,4,5];
+
+let doubled = arr.map(num => {
+    return num * 2;
+});
+console.log(doubled);  // output: [2,4,6,8,10]
+```
+  - Multidimensional Array, bisa dianalogikan dengan array of array. Ada array didalam array.
+```javascript
+let inventory = [
+    ['Kaos Polos' , 10],
+    ['Jaket Hoodie' , 12],
+    ['Topi' , 24],
+    ['Celana' , 8],
+];
+console.log(inventory);
+```
+
 # Object
 # Recursive
 # Web Storage
