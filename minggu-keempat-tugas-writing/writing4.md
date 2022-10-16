@@ -63,7 +63,7 @@
     - Lakukan commit perubahan kode
     - Push perubahan kode ke Github
     ```
-  - ### Berkolaborasi dengan orang lain
+  - ### Berkolaborasi Dengan Orang Lain
     - #### Mengundang orang lain
     ```
     - Buka repository Github
@@ -80,4 +80,39 @@
     - Pilih akun Github yang akan dijadikan tempat fork repository
     - Klik tombol Fork Repository
     ```
- ##
+## Responsive Web Design
+RWD atau Responsive Web Design adalah sebuah teknik atau metode bagi web designer untuk membuat suatu layout website yang dapat menyesuaikan diri sesuai dengan ukuran layar pengguna. Secara singkat RWD bertujuan untuk membuat desain website dapat di akses oleh device manapun (Universal)
+  - ### Tools Untuk Membuat Website Responsive
+    Salah satu tools yang dapat digunakan untuk Membuat website responsif dapat menggunakan Bootstrap. Bootstrap adalah framework CSS gratis dan open-source yang ditujukan untuk pengembangan web front-end yang responsif dan mobile-first. Ini berisi template desain berbasis HTML, CSS dan JavaScript untuk tipografi, formulir, tombol, navigasi, dan komponen antarmuka lainnya. Bootstrap menyediakan toolkit dari berbagai elemen yang Anda butuhkan untuk membangun situs web responsif dan memungkinkan kita memilih dan memilih elemen yang ingin kita sertakan di halaman Anda untuk membuat prototipe menjadi intuitif.
+  - ### Viewport
+    Viewport merupakan area yang dapat dilihat oleh pengguna kita pada halaman website. Ukuran viewport bervariasi berdasarkan peranti. Ukuran viewport pada sebuah peranti mobile, lebih kecil dibandingkan dengan layar komputer.
+    - #### Menambahkan Viewport pada html
+      ```html
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      ```
+  - ### Satuan Relatif CSS
+      - ```em``` Relatif terhadap ukuran font elemen (2em berarti 2 kali ukuran font saat ini)
+      - ```ex``` Relatif terhadap x-height dari font saat ini (jarang digunakan)
+      - ```ch``` Relatif terhadap lebar "0" (nol)
+      - ```rem``` Relative to font-size of the root element
+      - ```vw``` Relatif terhadap 1% dari lebar viewport*
+      - ```vh``` Relatif terhadap 1% dari ketinggian viewport*
+      - ```vmin``` Relatif terhadap 1% dari area pandang* dimensi yang lebih kecil
+      - ```vmax``` Relatif terhadap 1% dari viewport* dimensi yang lebih besar
+      - % Relatif terhadap elemen induk
+  - ### Media Query
+Media query adalah teknik CSS yang diperkenalkan di CSS3. Media Query menggunakan aturan @media untuk menyertakan blok properti CSS hanya jika kondisi tertentu benar.
+Media query memiliki dua jenis yaitu min-width dan max-width.
+  - #### Contoh Media Query
+    ```css
+    @media only screen and (max-width: 600px){
+    body {
+    background-color: lightblue;
+    }
+    }
+    ```
+    Jika browser window 600px atau lebih kecil, maka background color akan menjadi lightblue
+  - ### Flexbox & Grid
+    - Flexbox merupakan sebuah mode pengaturan atau konsep layout pada CSS yang digunakan untuk mengatur elemen atau container beserta item didalamnya pada halaman web.
+    - Grid adalah jenis layout yang dimana peletakan barang berada dalam baris-baris panjang pada sebuah toko. Penggunaan grid layout adalah pilihan yang tepat jika Anda ingin konsumen mampu menjelajahi seluruh isi toko dengan mengalir di antara rak-rak barang tersebut.
+    - #### Penggunaan Flexbox
