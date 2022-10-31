@@ -26,10 +26,30 @@
     <div>
     <HelloWorld/>
     </div>
-    )
+    );
   };
 
   export default App;
   ```
 
 ### JSX
+- JSX adalah syntax extension pada javascript
+- JSX dikembangkan untuk digunakan pada React JS
+- JSX perlu dicompile untuk menjadi Javascript, maka sebelum ditampilkan pada browser JSX akan di compile menjadi Javascript terlebih dahulu
+- Kita dapat menggunakan HTML didalam file extension .js menggunakan JSX
+- Setiap JSX hanya bisa memiliki 1 parent element. untuk mengatasinya kita dapat menggunakan tag `<div>` ataupun fragment `<>`
+- Berikut contoh penggunaannya
+  ```jsx
+  import React from 'React'
+
+  function HelloWorld() {
+   return (
+   <>
+   <h1>First Element</h1>
+   <h1>Second Element</h1>
+   </>
+   );
+  };
+
+  export default HelloWorld;
+  ```
