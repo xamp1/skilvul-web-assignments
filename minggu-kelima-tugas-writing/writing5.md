@@ -13,3 +13,23 @@
 - Karena kita sudah menginstall node.js maka npm secara otomatis akan tersintall
 - Lalu pergi ke cmd pada file folder yang kita inginkan ```npm init react-app my-app ```
 - Kita dapat mengakses react melalui ```localhost:3000``` atau pada yarn kita dapat menggunakan ```yarn start```
+
+### Component pada React JS
+- Komponen adalah bit kode yang independen dan dapat digunakan kembali. Mereka melayani tujuan yang sama seperti fungsi JavaScript, tetapi bekerja secara terpisah dan mengembalikan HTML. Terdapat dua jenis komponen antara lain, komponen Kelas dan komponen Fungsi
+- Berikut cara penggunaan komponen pada React JS
+  ```jsx
+  import React from 'React'
+  import HelloWorld from './HelloWorld';
+
+  function App() {
+    return (
+    <div>
+    <HelloWorld/>
+    </div>
+    )
+  };
+
+  export default App;
+  ```
+
+### JSX
