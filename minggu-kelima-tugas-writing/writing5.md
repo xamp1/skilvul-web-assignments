@@ -221,3 +221,24 @@
     - Maka Outputnya setiap tombol ubah ditekan maka state nama akan berubah, lalu komponen akan di re-render sehingga memanggil useEffect
     - useEffect biasanya akan digunakan saat kita membuat suatu call API, karena API akan selalu di panggil saat komponen terbentuk, maka call API bisa dilakukan dalam useEffect
 ### PropTypes
+- PropTypes adalah mekanisme yang memastikan bahwa nilai yang diteruskan adalah tipe data yang benar. Ini memastikan bahwa kita tidak menerima kesalahan di akhir aplikasi kita oleh konsol yang mungkin tidak mudah untuk ditangani.
+- Untuk menginstall proptypes cukup lakukan command berikut pada terminal kita ```npm install prop-types```
+- Berikut contoh penggunaan Prop-Types
+  ```jsx
+  import PropTypes from 'prop-types'
+
+  function Header(props){
+    return (
+    <>
+    <h2>Name : {props.char}</h2>
+    <h2>Age : {props.age}</h2>
+    </>
+    );
+  }
+
+  Header.propTypes = {
+    char: PropTypes.string,
+    age: PropTypes.number,
+  }
+  ```
+  - Dengan begini kita akan mendapatkan pesan error jika tidak sesusai dengan ekspektasi. Sehingga jika terjadi kesalahan kita dapat langsung mengetahuinya dan segera memperbaikinya
