@@ -121,3 +121,14 @@
     ```
 
 ### Lifecycle Methods
+- Lifecycle secara harafiah dapat di artikan sebagai siklus hidup. Misal siklus hidup manusia. Pertama manusia akan dilahirkan, kemudian memasuki fase pertumbuhan, dan terakhir akan meninggal. Sama seperti manusia, setiap component di react js ternyata juga memiliki siklus hidup.
+- 4 jenis lifecycle pada react antara lain
+  - Initialization. Adalah sebuah siklus React Native untuk menset State dan Props sebelum aplikasi di jalankan
+  - Mounting. Sebuah siklus ketika aplikasi baru saja di buka ada 2 jenis yaitu componentDidMount() ketika memuat aplikasi sebelum render dilakukan. componentWillMount yaitu siklus setelah render proses dilakukan. Tapi sekarang disarankan kamu menggunakan componentDidmount().
+  - Updatating. Yaitu ketika kamu mengubah data yang telah di Mounting.
+  - Unmount. Adalah proses menghancurkan atau mendestroy komponen yang sebelumnya di definisikan.
+- Berikut contoh diagramnya 
+![image](https://user-images.githubusercontent.com/76435776/198980306-42b0b39f-8342-4d07-8e9b-7b4b4c8f98aa.png)
+
+### Styling pada React JS
+- 
