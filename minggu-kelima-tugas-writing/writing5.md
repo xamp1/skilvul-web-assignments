@@ -131,4 +131,32 @@
 ![image](https://user-images.githubusercontent.com/76435776/198980306-42b0b39f-8342-4d07-8e9b-7b4b4c8f98aa.png)
 
 ### Styling pada React JS
-- 
+- Ada 3 cara membuat styling di react
+  - Impor external css di index.html
+  - Import css di setiap komponen
+  - Membuat inline css
+- Cara pertama direkomendasikan jika kita ingin memuat css dari framework CSS seperti Bootstrap.
+- Cara kedua lebih mudah digunakan jika kamu ingin memanajemen styling tiap komponen.
+- Cara ketiga bisa digunakan dengan kekuranganya berupa penurunan performa dari file HTML kamu.
+- Berikut contoh inline-styling pada .jsx
+  ```jsx
+  import React from "react";
+
+  export default function ImageFeed(props) {
+    return (
+      <div style={{ maxHeight: "20rem", padding: "10px", margin: "10px" }}>
+        <img
+          style={{
+            objectFit: "cover",
+            width: "100%",
+            height: "20rem",
+          }}
+          src={props.image}
+        />
+        <p>{props.description}</p>
+      </div>
+    );
+  }
+  ```
+
+## React JS Lanjutan
