@@ -8,3 +8,8 @@
 - React juga Populer. Kebanyakan perusahaan teknologi pun sudah menggunakan react js, jadi akan mudah untuk mencari pekerjaan baik freelance maupun startup.
 
 ### Instalasi & Cara Menjalankannya
+- Untuk mengunakan React kita perlu menginstall node.js
+- Lalu pergi ke https://create-react-app.dev/
+- Karena kita sudah menginstall node.js maka npm secara otomatis akan tersintall
+- Lalu pergi ke cmd pada file folder yang kita inginkan ```npm init react-app my-app ```
+- Kita dapat mengakses react melalui ```localhost:3000``` atau pada yarn kita dapat menggunakan ```yarn start```
