@@ -61,6 +61,7 @@
 
 ### Perbedaan Class Component dan Functional Component
 - Komponen berbasis kelas React layaknya roti dan mentega dari sebagian besar aplikasi web modern yang dibangun menggunakan ReactJS. Komponen-komponen ini adalah kelas sederhana (terdiri dari beberapa fungsi yang menambahkan fungsionalitas ke aplikasi). Semua komponen berbasis kelas adalah kelas anak untuk kelas Komponen dari ReactJS.
+- Kedua komponen ini menghasilkan hal yang sama, namun class menggunakan state dan functional menggunakan state hooks
   ```jsx
   import React from "react";
 
@@ -160,3 +161,40 @@
   ```
 
 ## React JS Lanjutan
+### React Hooks
+- Hooks adalah fitur baru yang dikenalkan pada reactJs pada tahun 2018
+- Hooks dibuat dengan tujuan untuk memudahkan penggunaan functional components agar bisa menggunakan state, dan lifecycle lainnya.
+- Hooks yang sering digunakakn adalah useState, dan useEffect
+  - useState. Penggunaan useState sedikit berbeda dengan setState/state di class components, namun pengertianya sendiri sama dengan state biasa.
+    - Berikut contoh penggunaan useState
+      ```jsx
+      import React from "react";
+      function App (){
+        const [nama, setNama] = useState("Ath Thaariq");
+        return (
+        <div className="App">
+        <p>halo, saya {nama}</p>
+        <button onClick = {() => setNama("Adz Zyad")}></button>
+        </div>
+        );
+      }
+      ```
+    - Update State. State dapat kita ubah menggunakan variable kedua dari state hooks, kita dapat menggunakan onChange untuk melakukan Update State. Berikut cara penggunaannya
+      ```jsx
+      function App (){
+        const [nama, setNama] = useState("Ath Thaariq");
+        const [kota, setKota] = useState(null);
+
+        return (
+        <div className="App">
+          <p>
+            halo saya {nama}, saya tinggal di kota{kota}
+          </p>
+          <button onClick = {() => setNama("Adz Zyad")>Ubah Nama</button>
+          <input type="text" onChange={(evt) => setKota(evt.target.value)} />
+        </div>
+        );
+      }
+      ```
+  - useEffect
+### PropTypes
