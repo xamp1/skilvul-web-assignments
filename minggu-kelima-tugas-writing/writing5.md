@@ -196,5 +196,28 @@
         );
       }
       ```
-  - useEffect
+  - useEffect. Penggunaan useEffect bisa dimasukan sebelum melakukan render, useEffect sendiri biasanya ditempatkan dibawah useState.
+    - Nantinya, apa yang kita tuliskan dalam useEffect akan dijalankan setiap ```componentDidMount```, ```componentDidUpdate```dan ```componentWillUnmount```
+    - Berikut contoh penggunaannya
+      ```jsx
+      import React from "react";
+      function App (){
+        const [nama, setNama] = useState("true");
+        const [changed, setChanged] = useState(0);
+        
+        useEffect(() => {
+          console.log(*ada oerubahan*);
+          setChanged(changed + 1);
+        }, [nama]);
+        
+        return (
+          <div>
+            <h1>Perubahan : {changed}</h1>
+            <button onClick = {() => setNama("!nama")}>Ubah</button>
+          </div>
+        );
+      }
+      ```
+    - Maka Outputnya setiap tombol ubah ditekan maka state nama akan berubah, lalu komponen akan di re-render sehingga memanggil useEffect
+    - useEffect biasanya akan digunakan saat kita membuat suatu call API, karena API akan selalu di panggil saat komponen terbentuk, maka call API bisa dilakukan dalam useEffect
 ### PropTypes
