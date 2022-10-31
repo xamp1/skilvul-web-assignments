@@ -16,7 +16,12 @@
 
 ### Component pada React JS
 - Komponen adalah bit kode yang independen dan dapat digunakan kembali. Mereka melayani tujuan yang sama seperti fungsi JavaScript, tetapi bekerja secara terpisah dan mengembalikan HTML. Terdapat dua jenis komponen antara lain, komponen Kelas dan komponen Fungsi
-- Berikut cara penggunaan komponen pada React JS
+- Cara membuat komponen pada project sebagai berikut
+  - Buatlah sebuah project, atau buka project yang telah dibuat pada code editor
+  - Lalu jalankan React JS
+  - Buat folder Components
+  - Buat file dengan nama HelloWorld. Nama file harus menggunakan HurufBesar di awal dan kata selanjutnya
+- Berikut penggunaan komponen pada React JS
   ```jsx
   import React from 'React'
   import HelloWorld from './HelloWorld';
@@ -52,4 +57,13 @@
   };
 
   export default HelloWorld;
+  ```
+
+### Perbedaan Class Component dan Functional Component
+- 
+- Komponen fungsional adalah beberapa komponen umum yang akan ditemui saat bekerja di React. Ini adalah fungsi JavaScript. Kita dapat membuat komponen fungsional untuk React dengan menulis fungsi JavaScript.
+  ```jsx
+  const Saya()=> {
+    return <h2>Hi, Saya Ath Thaariq!</h2>;
+  }
   ```
