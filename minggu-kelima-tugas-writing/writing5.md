@@ -60,10 +60,64 @@
   ```
 
 ### Perbedaan Class Component dan Functional Component
-- 
+- Komponen berbasis kelas React layaknya roti dan mentega dari sebagian besar aplikasi web modern yang dibangun menggunakan ReactJS. Komponen-komponen ini adalah kelas sederhana (terdiri dari beberapa fungsi yang menambahkan fungsionalitas ke aplikasi). Semua komponen berbasis kelas adalah kelas anak untuk kelas Komponen dari ReactJS.
+  ```jsx
+  import React from "react";
+
+  class App extends React.Component {
+    render() {
+      return <h1>Kelas Komponen</h1>;
+    }
+  }
+
+  export default App;
+  ```
 - Komponen fungsional adalah beberapa komponen umum yang akan ditemui saat bekerja di React. Ini adalah fungsi JavaScript. Kita dapat membuat komponen fungsional untuk React dengan menulis fungsi JavaScript.
   ```jsx
   const Saya()=> {
     return <h2>Hi, Saya Ath Thaariq!</h2>;
   }
   ```
+
+### State & Props
+- State & Props adalah hal yang berhubungan dengan Stateless dan Stateful Component
+- Stateless berarti tidak memiliki state. Hanya memiliki props
+- Statefull berarti memiliki state dan bisa mengirim state tersebut ke component.
+- Secara singkat state adalah data lokal. Props Digunakan agar component memiliki data yang dinamis dan dikirim dari component lain
+- Berikut contoh penggunaannya
+  - Contoh penggunaan state
+    ```jsx
+    class Test extends React.Component {    
+        constructor() {    
+            this.state = {      
+                id: 1,      
+                name: "test"    
+            };  
+        }    
+
+        render() {    
+            return (      
+                <div>        
+                  <p>{this.state.id}</p>        
+                  <p>{this.state.name}</p>      
+                </div>    
+            );  
+        }
+    }
+    ```
+  - Pass data menggunakan props
+    ```jsx
+    class ParentComponent extends Component {    
+        render() {    
+            return (        
+                <ChildComponent name="First Child" />    
+            );  
+        }
+    }
+
+    const ChildComponent = (props) => {    
+        return <p>{props.name}</p>; 
+    };
+    ```
+
+### Lifecycle Methods
