@@ -1,1 +1,4 @@
-# _Tugas Rangkuman Minggu Ke 6_
+# _Tugas Rangkuman Minggu Ke Enam_
+
+## React Router
+## State Managemenet Redux
