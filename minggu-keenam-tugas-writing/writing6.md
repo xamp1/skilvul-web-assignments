@@ -90,5 +90,32 @@ Fitur yang paling sederhana dan paling umum di React Router adalah menangani Rou
   <Route path="/books/:id" element={<Book />} />
 </Routes>
 ```
-Rute terakhir pada contoh di atas adalah rute dinamis yang memiliki parameter dinamis ```:id```. Dalam case ini, Dynamic Route Kita akan mencocokkan URL apa pun yang dimulai dengan /book dan diakhiri dengan beberapa nilai. Misalnya, /books/1, /books/bookName, dan /books/literally-anything semuanya akan cocok dengan Dynamic Route kita.
+Rute terakhir pada contoh di atas adalah rute dinamis yang memiliki parameter dinamis ```:id```. Dalam case ini, Dynamic Route Kita akan mencocokkan URL apa pun yang dimulai dengan /book dan diakhiri dengan beberapa nilai. Misalnya, /books/1, /books/bookName, dan /books/all semuanya akan cocok dengan Dynamic Route kita.
+
+#### Membuat Nested Routing
+Dalam contoh di atas, kita memiliki tiga rute yang dimulai dengan /books sehingga kita dapat menyarangkan rute-rute tersebut di dalam satu sama lain untuk membersihkan rute kita.
+```jsx
+import { Routes, Route } from "react-router-dom"
+import { BookList } from "./pages/BookList"
+import { Book } from "./pages/Book"
+import { NewBook } from "./pages/NewBook"
+import { BookLayout } from "./BookLayout"
+
+export function BookRoutes() {
+  return (
+    <Routes>
+      <Route element={<BookLayout />}>
+        <Route index element={<BookList />} />
+        <Route path=":id" element={<Book />} />
+        <Route path="new" element={<NewBook />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  )
+}
+```
+Membuat komponen baru untuk menyimpan Nested Route Kita, komponen ini harus memiliki komponen Route dan di dalam komponen Route itu harus semua komponen Route yang Kita cocokkan dengan Route induk. Dalam kasus kami, kami memindahkan semua Route /books kami ke komponen BookRoute ini. Kemudian di Route induk Kita perlu menentukan Rute yang memiliki jalur yang sama dengan jalur yang dibagikan oleh semua Rute bersarang Kita. Dalam kasus kami itu adalah /books. Yang penting, bagaimanapun, adalah Kita harus mengakhiri jalur Rute induk Kita dengan * jika tidak, itu tidak akan cocok dengan rute anak dengan benar.
+
+Pada dasarnya, kode yang telah kita tulis mengatakan bahwa setiap kali sebuah rute dimulai dengan /book/ itu harus mencari di dalam komponen BookRoutes untuk melihat apakah mereka adalah Rute yang cocok. Ini juga mengapa kami memiliki rute * lain di BookRoutes sehingga kami dapat memastikan jika URL kami tidak cocok dengan salah satu BookRoutes, itu akan merender komponen NotFound dengan benar.
+
 ## State Managemenet Redux
