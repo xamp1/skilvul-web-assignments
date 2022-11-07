@@ -119,3 +119,124 @@ Membuat komponen baru untuk menyimpan Nested Route Kita, komponen ini harus memi
 Pada dasarnya, kode yang telah kita tulis mengatakan bahwa setiap kali sebuah rute dimulai dengan /book/ itu harus mencari di dalam komponen BookRoutes untuk melihat apakah mereka adalah Rute yang cocok. Ini juga mengapa kami memiliki rute * lain di BookRoutes sehingga kami dapat memastikan jika URL kami tidak cocok dengan salah satu BookRoutes, itu akan merender komponen NotFound dengan benar.
 
 ## State Managemenet Redux
+Redux dikenalkan sebagai "Kontainer yang Dapat Diprediksi untuk Aplikasi JS." 
+  
+### Konsep Redux Pada React JS
+Untuk menggunakan Redux kita perlu menjalankan ```npm install @reduxjs/toolkit react-redux``` untuk menginstall redux.
+
+Kita dapat menggunakan Redux untuk mengelola data pada halaman JavaScript sederhana. Tidak ada perpustakaan lain yang diperlukan. Ini juga bagus karena tidak ada penyiapan yang terlibat jika Kita hanya ingin menjelajah. Redux didasarkan pada Flux. Arsitektur aplikasi untuk membangun antarmuka pengguna yang mendukung aliran data searah.
+
+### Menggunakan React Redux
+Redux sendiri adalah pustaka mandiri yang dapat digunakan dengan lapisan atau kerangka kerja UI apa pun, termasuk React, Angular, Vue, Ember, dan vanilla JS. Meskipun Redux dan React umumnya digunakan bersama-sama, mereka tidak tergantung satu sama lain.
+
+Jika Kita menggunakan Redux dengan kerangka kerja UI apa pun, Kita biasanya akan menggunakan pustaka "UI binding" untuk mengikat Redux bersama kerangka kerja UI Kita, daripada berinteraksi langsung dengan toko dari kode UI Kita.
+
+#### Membuat Redux Store
+Buatlah file bernama src/app/store.js. Impor API configureStore dari Redux Toolkit. Kita akan mulai dengan membuat toko Redux kosong, dan mengekspornya:
+```jsx
+import { configureStore } from '@reduxjs/toolkit'
+
+export default configureStore({
+  reducer: {},
+})
+```
+Ini membuat toko Redux, dan juga secara otomatis mengonfigurasi ekstensi Redux DevTools sehingga Kita dapat memeriksa toko saat development.
+
+#### Provide Redux ke React
+Setelah Store dibuat, kita dapat membuatnya tersedia untuk komponen React kita dengan meletakkan React Redux <Provider> di sekitar aplikasi kita di src/index.js. Impor toko Redux yang baru saja kita buat, letakkan <Provider> di sekitar <App> Kita, dan teruskan Store sebagai prop:
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import App from './App'
+import store from './app/store'
+import { Provider } from 'react-redux'
+
+// As of React 18
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+)
+```
+#### Redux State Slice
+Tambahkan file baru bernama src/features/counter/counterSlice.js. Dalam file itu, impor createSlice API dari Redux Toolkit.
+
+Membuat slice memerlukan nama string untuk mengidentifikasi slice, nilai status awal, dan satu atau lebih fungsi Reducer untuk menentukan bagaimana status dapat diperbarui.
+```jsx
+import { createSlice } from '@reduxjs/toolkit'
+
+export const counterSlice = createSlice({
+  name: 'counter',
+  initialState: {
+    value: 0,
+  },
+  reducers: {
+    increment: (state) => {
+      // Redux Toolkit memungkinkan kita untuk menuliskan logika mutasi dalam redux
+      state.value += 1
+    },
+    decrement: (state) => {
+      state.value -= 1
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload
+    },
+  },
+})
+
+// Action dibuat untuk setiap kasus fungsi Reducer
+export const { increment, decrement, incrementByAmount } = counterSlice.actions
+
+export default counterSlice.reducer
+```
+
+#### Tambahkan Slice Reducer ke Store
+Selanjutnya, kita perlu mengimpor fungsi Reducer dari irisan penghitung dan menambahkannya ke Store kita. Dengan mendefinisikan bidang di dalam parameter reduksi, kami memberi tahu Store untuk menggunakan fungsi Reducer irisan ini untuk menangani semua pembaruan ke status itu.
+```jsx
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from '../features/counter/counterSlice'
+
+export default configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+})
+```
+
+#### Gunakan Redux State dan Actions dalam React Components
+Sekarang kita dapat menggunakan React Redux Hooks agar komponen React dapat berinteraksi dengan Store Redux. Kita dapat membaca data dari penyimpanan dengan useSelector, dan mengirim tindakan menggunakan useDispatch. Buat file src/features/counter/Counter.js dengan komponen <Counter> di dalamnya, lalu impor komponen tersebut ke App.js dan render di dalam <App>.
+```jsx
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from './counterSlice'
+import styles from './Counter.module.css'
+
+export function Counter() {
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
+
+  return (
+    <div>
+      <div>
+        <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          Increment
+        </button>
+        <span>{count}</span>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement
+        </button>
+      </div>
+    </div>
+  )
+}
+```
+### Menggunakan Redux Thunk
