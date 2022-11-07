@@ -31,6 +31,10 @@ Ada beberapa Jenis Routing, kita akan mencoba membuat 3 jenis routing, antara la
 - Nested Routing
 
 #### Membuat Basic Routing
+Jalankan ```npm i react-router-dom``` untuk menginstal React Router. Setelah Kita memiliki library ini, ada tiga hal yang perlu Kita lakukan untuk menggunakan React Router.
+- Siapkan router Kita
+- Tentukan rute Kita
+- Menangani navigasi
 
 ##### Mengkonfigurasi Router
 Langkah termudah sejauh ini adalah menyiapkan router kita. Yang perlu Kita lakukan adalah mengimpor router khusus yang Kita butuhkan (BrowserRouter untuk web dan NativeRouter untuk Mobile) dan membungkus seluruh aplikasi Kita di router tersebut.
@@ -77,4 +81,14 @@ export function App() {
   )
 }
 ```
+#### Membuat Dynamic Routing
+Fitur yang paling sederhana dan paling umum di React Router adalah menangani Route Dynamic.
+```jsx
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/books" element={<BookList />} />
+  <Route path="/books/:id" element={<Book />} />
+</Routes>
+```
+Rute terakhir pada contoh di atas adalah rute dinamis yang memiliki parameter dinamis ```:id```. Dalam case ini, Dynamic Route Kita akan mencocokkan URL apa pun yang dimulai dengan /book dan diakhiri dengan beberapa nilai. Misalnya, /books/1, /books/bookName, dan /books/literally-anything semuanya akan cocok dengan Dynamic Route kita.
 ## State Managemenet Redux
