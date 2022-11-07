@@ -129,10 +129,10 @@ Kita dapat menggunakan Redux untuk mengelola data pada halaman JavaScript sederh
 ### Menggunakan React Redux
 Redux sendiri adalah pustaka mandiri yang dapat digunakan dengan lapisan atau kerangka kerja UI apa pun, termasuk React, Angular, Vue, Ember, dan vanilla JS. Meskipun Redux dan React umumnya digunakan bersama-sama, mereka tidak tergantung satu sama lain.
 
-Jika Kita menggunakan Redux dengan kerangka kerja UI apa pun, Kita biasanya akan menggunakan pustaka "UI binding" untuk mengikat Redux bersama kerangka kerja UI Kita, daripada berinteraksi langsung dengan toko dari kode UI Kita.
+Jika Kita menggunakan Redux dengan kerangka kerja UI apa pun, Kita biasanya akan menggunakan pustaka "UI binding" untuk mengikat Redux bersama kerangka kerja UI Kita, daripada berinteraksi langsung dengan store dari kode UI Kita.
 
 #### Membuat Redux Store
-Buatlah file bernama src/app/store.js. Impor API configureStore dari Redux Toolkit. Kita akan mulai dengan membuat toko Redux kosong, dan mengekspornya:
+Buatlah file bernama src/app/store.js. Impor API configureStore dari Redux Toolkit. Kita akan mulai dengan membuat Store Redux kosong, dan mengekspornya:
 ```jsx
 import { configureStore } from '@reduxjs/toolkit'
 
@@ -140,10 +140,10 @@ export default configureStore({
   reducer: {},
 })
 ```
-Ini membuat toko Redux, dan juga secara otomatis mengonfigurasi ekstensi Redux DevTools sehingga Kita dapat memeriksa toko saat development.
+Ini membuat store Redux, dan juga secara otomatis mengonfigurasi ekstensi Redux DevTools sehingga Kita dapat memeriksa store saat development.
 
 #### Provide Redux ke React
-Setelah Store dibuat, kita dapat membuatnya tersedia untuk komponen React kita dengan meletakkan React Redux <Provider> di sekitar aplikasi kita di src/index.js. Impor toko Redux yang baru saja kita buat, letakkan <Provider> di sekitar <App> Kita, dan teruskan Store sebagai prop:
+Setelah Store dibuat, kita dapat membuatnya tersedia untuk komponen React kita dengan meletakkan React Redux <Provider> di sekitar aplikasi kita di src/index.js. Impor Redux Store yang baru saja kita buat, letakkan <Provider> di sekitar <App> Kita, dan teruskan Store sebagai prop:
 ```jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -239,4 +239,33 @@ export function Counter() {
   )
 }
 ```
-### Menggunakan Redux Thunk
+### Redux Thunk
+Thunk adalah konsep pemrograman di mana fungsi digunakan untuk menunda evaluasi/perhitungan operasi.
+
+Redux Thunk adalah middleware yang memungkinkan Kita memanggil pembuat tindakan yang mengembalikan fungsi alih-alih objek tindakan. Fungsi tersebut menerima metode pengiriman toko, yang kemudian digunakan untuk mengirimkan tindakan sinkron reguler di dalam badan fungsi setelah operasi asinkron selesai.
+
+#### Menggunakan Redux Thunk
+Kita dapat menjalankan ```npm install redux-thunk@2.3.0``` untuk menginstall redux thunk.
+
+Sekarang terapkan middleware saat membuat store aplikasi Kita menggunakan applyMiddleware dari Redux. Diberikan aplikasi React dengan redux dan react-redux, file index.js Kita mungkin terlihat seperti ini
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import './index.css';
+import rootReducer from './reducers';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+
+// use applyMiddleware to add the thunk middleware to the store
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
+```
