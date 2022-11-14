@@ -138,3 +138,102 @@ export default Profile;
 ```
 Jika kita perhatikan, useContext terlihat mirip dengan useState. Dan nanti kita akan menggunakannya sama seperti useState, Oleh karena itu, setiap kali fungsi setUserDetails dipanggil, perubahan status akan efektif di seluruh aplikasi, menghemat terlalu banyak pengeboran penyangga.
 ## React Testing
+Dalam testing teknologi berarti memeriksa apakah kode kami memenuhi beberapa harapan. Misalnya: fungsi yang disebut "transformator" harus mengembalikan keluaran yang diharapkan dengan memberikan beberapa masukan.
+
+Test itu sendiri terdiri dari 3 kategori
+- Unit Testing
+- Integration Testing
+- UI Testing
+
+### Menggunakan Testing
+Dimulai dengan setup project dapat menggunakan syntax berikut ```mkdir getting-started-with-jest && cd $_```
+```npm init -y```
+
+lalu install jest dengan syntax ```npm i jest --save-dev```
+lalu konfigurasi npm script untuk menjalankan jest pada ```package.json``` seperti berikut
+```jsx
+ "scripts": {
+    "test": "jest"
+  },
+```
+
+### Test structure, dan first failing test
+Saatnya membuat tes Jest pertama kita. Buka ```filterByTerm.spec.js``` dan buat blok uji sebagai berikut:
+```jsx
+describe("Filter function", () => {
+  // test
+});
+```
+Selanjutnya kita akan bertemu dengan fungsi lain yang disebut tes yang merupakan blok tes yang sebenarnya:
+```jsx
+describe("Filter function", () => {
+  test("it should filter by a search term (link)", () => {
+    // actual test
+  });
+});
+```
+Pada titik ini kita siap untuk menulis tes. Pertama mari kita definisikan input sederhana, sebuah array objek:
+```jsx
+describe("Filter function", () => {
+  test("it should filter by a search term (link)", () => {
+    const input = [
+      { id: 1, url: "https://www.url1.dev" },
+      { id: 2, url: "https://www.url2.dev" },
+      { id: 3, url: "https://www.link3.dev" }
+    ];
+  });
+});
+```
+Selanjutnya kita akan menentukan hasil yang diharapkan. Sesuai spesifikasi, fungsi yang diuji harus mengabaikan objek yang properti urlnya tidak cocok dengan istilah pencarian yang diberikan.
+```jsx
+describe("Filter function", () => {
+  test("it should filter by a search term (link)", () => {
+    const input = [
+      { id: 1, url: "https://www.url1.dev" },
+      { id: 2, url: "https://www.url2.dev" },
+      { id: 3, url: "https://www.link3.dev" }
+    ];
+
+    const output = [{ id: 3, url: "https://www.link3.dev" }];
+  });
+});
+```
+kita akan menggunakan ```expect```, dan Jest matcher untuk memeriksa apakah fungsi fiktif kami (untuk saat ini) mengembalikan hasil yang diharapkan saat dipanggil. Berikut tesnya:
+```jsx
+expect(filterByTerm(input, "link")).toEqual(output);
+```
+Berikut tes lengkapnya:
+```jsx
+describe("Filter function", () => {
+  test("it should filter by a search term (link)", () => {
+    const input = [
+      { id: 1, url: "https://www.url1.dev" },
+      { id: 2, url: "https://www.url2.dev" },
+      { id: 3, url: "https://www.link3.dev" }
+    ];
+
+    const output = [{ id: 3, url: "https://www.link3.dev" }];
+
+    expect(filterByTerm(input, "link")).toEqual(output);
+
+  });
+});
+```
+ketik syntax ```npm test``` pada commandline untuk menjalankannya
+```test
+FAIL  __tests__/filterByTerm.spec.js
+  Filter function
+    ✕ it should filter by a search term (2ms)
+
+  ● Filter function › it should filter by a search term (link)
+
+    ReferenceError: filterByTerm is not defined
+
+       9 |     const output = [{ id: 3, url: "https://www.link3.dev" }];
+      10 | 
+    > 11 |     expect(filterByTerm(input, "link")).toEqual(output);
+         |     ^
+      12 |   });
+      13 | });
+      14 |
+```
